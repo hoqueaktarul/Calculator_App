@@ -3,8 +3,8 @@ import { useState, useEffect, useRef } from "react";
 
 export default function App() {
   const [result, setresult] = useState("");
-  const inputRef = useRef(null);
-  useEffect(() => inputRef.current.focus());
+  // const inputRef = useRef(null);
+  // useEffect(() => inputRef.current.focus());
 
   function handClick(e) {
     setresult(result.concat(e.target.name));
@@ -29,7 +29,11 @@ export default function App() {
   return (
     <div className="App">
       <form>
-        <input value={result} ref={inputRef} placeholder="Enter" />
+        <input
+          value={result}
+          placeholder="Enter"
+          //  ref={inputRef}
+        />
       </form>
 
       <div className="keypad">
